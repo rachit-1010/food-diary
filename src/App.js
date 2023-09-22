@@ -1,6 +1,7 @@
 import './App.css';
 import { saveFoodItem, getFoodItemsForDate, getQuotes } from './db.js';
 import { useState, useEffect } from 'react';
+import FoodItem from './FoodItem.js';
 import Quotes from './Quotes.js';
 
 
@@ -29,6 +30,8 @@ function App() {
     const food = e.target.food.value;
     const isHealthy = e.target.isHealthy.checked;
     saveFoodItem(food, isHealthy);
+    setFoodItemsToday([...foodItemsToday, {food: food, isHealthy: isHealthy, timeStamp: new Date()}])
+
   }
 
   function handlePreviousDay() {
@@ -54,41 +57,40 @@ function App() {
         <Quotes />
 
         {/* Add all the food items from foodItemsToday */}
-        <h1>Food Diary</h1>
+        <h2>Food Diary</h2>
         {/* Buttons to change the date */}
-        <button onClick={handlePreviousDay}>Previous Day</button>
-        <br />
-        <button onClick={handleNextDay}>Next Day</button>
-        <h2>Today is {`${today.getFullYear()}-${today.getMonth()}-${today.getDate()}`}</h2>
-        <h3>Food Items</h3>
+        <div id='dateButtons'>
+          <button className='change-date' onClick={handlePreviousDay}> {'<'} </button>
+          <span>{`${today.getDate()} ${["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"][today.getMonth()]}`}</span>
+          <button id={new Date().getDate()===today.getDate() ? 'disable-button' : ''} className='change-date' onClick={handleNextDay}> {'>'} </button>
+        </div>
         
-        {foodItemsToday.length === 0 ? (
-          <p>No food items for today</p>
-        ) : (
-          foodItemsToday.map((foodItem, index) => (
-            <div key={index}>
-              <h4>{foodItem.food}</h4>
-              <p>{foodItem.isHealthy ? "Healthy" : "Unhealthy"}</p>
-            </div>
-          ))
-        )}
+        <div id='foodItems'>
+          {foodItemsToday.length === 0 ? (
+            <p>No food items for today</p>
+          ) : (
+            foodItemsToday.map((foodItem, index) => (
+              <FoodItem key={index} foodItem={foodItem} />
+            ))
+          )}
+        </div>
 
         <form onSubmit={handleSubmitFoodItem}>
           <label>
-            Food:
-          <br />
-            <input type="text" name="food" />
+            Had something? 
+            <div>Record it for posterity:</div>
+            <input type="text" name="food" id="addFood"/>
           </label>
           <br />
           <label>
             <input type="checkbox" name="isHealthy" />
-            Is it healthy?
+            {' '} Is it Healthy?
           </label>
           <br />
-          <input type="submit" value="Submit" />
+          <input type="submit" value="Add" />
         </form>
-      </div>
-      <div>
+        <div id="footer">
+        </div>
       </div>
     </div>
   );

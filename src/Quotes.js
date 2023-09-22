@@ -18,8 +18,8 @@ export default function Quotes() {
 	}, []);
 
 	return (
-		<div>
-			<p>{quotesList[Math.floor(Math.random() * quotesList.length)]}</p>
+		<div id="quote">
+			<p>"{quotesList[Math.floor(Math.random() * quotesList.length)]}"</p>
 		</div>
 	)
 }

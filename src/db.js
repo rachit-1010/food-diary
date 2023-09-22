@@ -29,7 +29,11 @@ function saveFoodItem(foodItem, isHealthy) {
       },
     },
     { upsert: true }
-  )
+  ).then(() => {
+    console.log("Successfully saved food item")
+  }).catch((err) => {
+    console.error("Failed to save food item", err)
+  })
 }
 
 async function getFoodItemsForDate (date) {
