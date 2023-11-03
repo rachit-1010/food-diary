@@ -1,5 +1,5 @@
 import './App.css';
-import { saveFoodItem, getFoodItemsForDate, getQuotes } from './db.js';
+import { saveFoodItem, getFoodItemsForDate } from './db.js';
 import { useState, useEffect } from 'react';
 import FoodItem from './FoodItem.js';
 import Quotes from './Quotes.js';
@@ -31,6 +31,9 @@ function App() {
     const isHealthy = e.target.isHealthy.checked;
     saveFoodItem(food, isHealthy);
     setFoodItemsToday([...foodItemsToday, {food: food, isHealthy: isHealthy, timeStamp: new Date()}])
+    // clear the form
+    e.target.food.value = '';
+    e.target.isHealthy.checked = false;
 
   }
 
@@ -75,6 +78,8 @@ function App() {
           )}
         </div>
 
+        {/* show the below code only if date == today */}
+        {today.getDate() === new Date().getDate() &&
         <form onSubmit={handleSubmitFoodItem}>
           <label>
             Had something? 
@@ -88,7 +93,7 @@ function App() {
           </label>
           <br />
           <input type="submit" value="Add" />
-        </form>
+        </form>}
         <div id="footer">
         </div>
       </div>

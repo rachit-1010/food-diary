@@ -1,8 +1,15 @@
 import * as Realm from 'realm-web';
 
-const app = new Realm.App({ id: "data-dqkxe" });
+// const app = new Realm.App({ id: "data-dqkxe" });
 
-const CLUSTER_NAME = "FoodDiary"
+// const CLUSTER_NAME = "FoodDiary"
+// const DATABASE_NAME = "FoodDiary"
+// const COLLECTION_NAME = "FoodDetails"
+// const QUOTE_COLLECTION_NAME = "Quotes"
+
+const app = new Realm.App({ id: "data-pjwqb" });
+
+const CLUSTER_NAME = "LifeSync"
 const DATABASE_NAME = "FoodDiary"
 const COLLECTION_NAME = "FoodDetails"
 const QUOTE_COLLECTION_NAME = "Quotes"
