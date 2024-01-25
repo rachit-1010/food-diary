@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/food-diary-sravani/static/css/main.0f8fd636.css",
-    "main.js": "/food-diary-sravani/static/js/main.6782c340.js",
-    "static/js/787.f6cb440e.chunk.js": "/food-diary-sravani/static/js/787.f6cb440e.chunk.js",
+    "main.js": "/food-diary-sravani/static/js/main.88da989f.js",
+    "static/js/787.3c3d27c8.chunk.js": "/food-diary-sravani/static/js/787.3c3d27c8.chunk.js",
     "index.html": "/food-diary-sravani/index.html",
     "main.0f8fd636.css.map": "/food-diary-sravani/static/css/main.0f8fd636.css.map",
-    "main.6782c340.js.map": "/food-diary-sravani/static/js/main.6782c340.js.map",
-    "787.f6cb440e.chunk.js.map": "/food-diary-sravani/static/js/787.f6cb440e.chunk.js.map"
+    "main.88da989f.js.map": "/food-diary-sravani/static/js/main.88da989f.js.map",
+    "787.3c3d27c8.chunk.js.map": "/food-diary-sravani/static/js/787.3c3d27c8.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0f8fd636.css",
-    "static/js/main.6782c340.js"
+    "static/js/main.88da989f.js"
   ]
 }
