@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/food-diary/static/css/main.0f8fd636.css",
-    "main.js": "/food-diary/static/js/main.9c203e39.js",
-    "static/js/787.f6cb440e.chunk.js": "/food-diary/static/js/787.f6cb440e.chunk.js",
-    "index.html": "/food-diary/index.html",
-    "main.0f8fd636.css.map": "/food-diary/static/css/main.0f8fd636.css.map",
-    "main.9c203e39.js.map": "/food-diary/static/js/main.9c203e39.js.map",
-    "787.f6cb440e.chunk.js.map": "/food-diary/static/js/787.f6cb440e.chunk.js.map"
+    "main.css": "/food-diary-sravani/static/css/main.0f8fd636.css",
+    "main.js": "/food-diary-sravani/static/js/main.6782c340.js",
+    "static/js/787.f6cb440e.chunk.js": "/food-diary-sravani/static/js/787.f6cb440e.chunk.js",
+    "index.html": "/food-diary-sravani/index.html",
+    "main.0f8fd636.css.map": "/food-diary-sravani/static/css/main.0f8fd636.css.map",
+    "main.6782c340.js.map": "/food-diary-sravani/static/js/main.6782c340.js.map",
+    "787.f6cb440e.chunk.js.map": "/food-diary-sravani/static/js/787.f6cb440e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0f8fd636.css",
-    "static/js/main.9c203e39.js"
+    "static/js/main.6782c340.js"
   ]
 }
